@@ -1,0 +1,38 @@
+
+.card-container{
+    height:80vh;
+    width: 80vw;
+    border: solid blue 1px;
+    background-color: grey;
+}
+
+.book-card {
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    border: black 1px solid;
+    text-align: center;
+}
+
+#book-form {
+    position: fixed;
+    background-color: white;
+    height: 80vh;
+    width: 90vw;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    align-items: center;
+}
+
+
+#book-form input{
+    display: flex;
+    flex-direction: row;
+}
+
+#book-form label{
+    display: flex;
+    flex-direction: column;
+}
