@@ -95,3 +95,58 @@ function updateBookDisplay(){
  Book.prototype.toggleRead = function(){
     this.read = !this.read;
  }
+
+ const formValidation = () =>{
+    const bookForm = document.querySelector('.bookForm');
+    const author = document.querySelector('#author');
+    const authorError = document.querySelector('#author-error');
+
+    const title = document.querySelector('#title');
+    const titleError = document.querySelector('#title-error');
+
+    const numberOfPages = document.querySelector('#numberOfPages');
+    const numPagesError = document.querySelector('#num-pages-error');
+
+    author.addEventListener('input', ()=>{
+        if(author.validity.valueMissing){
+            author.setCustomValidity('Missing value.');
+            authorError.textContent = author.validationMessage;
+        }
+        else if(author.validity.tooShort){
+            author.setCustomValidity('Must be at least 4 characters long.');
+            authorError.textContent = author.validationMessage;
+        }
+        else{
+            author.setCustomValidity('');
+            authorError.textContent = author.validationMessage;
+        }
+
+    });
+
+
+    title.addEventListener('input', ()=>{
+        if(title.validity.valueMissing){
+            title.setCustomValidity('Missing value.');
+            titleError.textContent = title.validationMessage;
+        }
+        else{
+            title.setCustomValidity('');
+            titleError.textContent = title.validationMessage;
+        }
+
+    });
+
+
+    numberOfPages.addEventListener('input', ()=>{
+        if(numberOfPages.validity.valueMissing){
+            numberOfPages.setCustomValidity('Missing value.');
+            numPagesError.textContent = numberOfPages.validationMessage;
+        }
+        else{
+            numberOfPages.setCustomValidity('');
+            numPagesError.textContent = numberOfPages.validationMessage;
+        }
+
+    });
+ }
+ formValidation();

@@ -3,13 +3,13 @@
     height:80vh;
     width: 80vw;
     border: solid blue 1px;
-    background-color: grey;
+    background-color: white;
 }
 
 .book-card {
     display: flex;
     flex-direction: column;
-    background-color: red;
+    background-color: rgba(0,0,0,.1);
     border: black 1px solid;
     text-align: center;
 }
@@ -24,6 +24,7 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     z-index: 999;
     align-items: center;
+    
 }
 
 
@@ -35,4 +36,24 @@
 #book-form label{
     display: flex;
     flex-direction: column;
+}
+
+.container{
+    position: absolute;
+    left: 9%;
+    top: 7%;
+}
+
+#addBookButton{
+    width: 100%;
+}
+
+.formContainer{
+    position: absolute;
+    left: 40%;
+    top: 20%
+}
+
+.error{
+    color: red;
 }

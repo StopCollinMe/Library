@@ -9,24 +9,29 @@
     <script src="library.js" defer></script>
 </head>
 <body>
+    <div class="container">
     <button id="addBookButton">Add Book</button>
-    
     <form id="book-form" style="display: none;">
-        <label for="author">Author: </label>
-        <input type="text" name="author" id="author">
+        <div class="formContainer">
+            <label for="author">Author: </label>
+            <input type="text" name="author" id="author" required minlength="4" maxlength="45">
+            <span id="author-error" class="error"></span>
 
-        <label for="title">Title: </label>
-        <input type="text" name="title" id="title">
+            <label for="title">Title: </label>
+            <input type="text" name="title" id="title" required minlength="1" maxlength="45">
+            <span id="title-error" class="error"></span>
 
-        <label for="numberOfPages">Number of Pages: </label>
-        <input type="text" name="numberOfPages" id="numberOfPages">
+            <label for="numberOfPages">Number of Pages: </label>
+            <input type="number" name="numberOfPages" id="numberOfPages" required min="1" max="9999">
+            <span id="num-pages-error" class="error"></span>
 
-        <label for="read">Read: </label>
-        <input type="checkbox" name="read" id="read">
+            <label for="read">Read: </label>
+            <input type="checkbox" name="read" id="read">
 
-        <button type="submit" class="submit">Add Book</button>
+            <button type="submit" class="submit">Add Book</button>
+        </div>
     </form>
     <div class="card-container"></div>
-
+</div>
 </body>
 </html>
